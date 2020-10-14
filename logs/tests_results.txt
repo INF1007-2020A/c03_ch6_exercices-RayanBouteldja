@@ -1,0 +1,65 @@
+test_anagram (__main__.TestExercice) ... ERROR
+test_doubles (__main__.TestExercice) ... FAIL
+test_grades (__main__.TestExercice) ... FAIL
+test_histogram (__main__.TestExercice) ... FAIL
+test_order (__main__.TestExercice) ... ERROR
+
+======================================================================
+ERROR: test_anagram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 35, in test_anagram
+    output = [exercice.anagrams(v) for v in words]
+  File "test_exercice.py", line 35, in <listcomp>
+    output = [exercice.anagrams(v) for v in words]
+  File "/home/runner/work/c03_ch6_exercices-RayanBouteldja/c03_ch6_exercices-RayanBouteldja/exercice.py", line 25, in anagrams
+    mot1=list(input('mot 1: '))
+EOFError: EOF when reading a line
+
+======================================================================
+ERROR: test_order (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 19, in test_order
+    output = [exercice.order(v) for v in values]
+  File "test_exercice.py", line 19, in <listcomp>
+    output = [exercice.order(v) for v in values]
+  File "/home/runner/work/c03_ch6_exercices-RayanBouteldja/c03_ch6_exercices-RayanBouteldja/exercice.py", line 9, in order
+    values=list.append(int(input('écrivez 10 nombres entiers: ')))
+EOFError: EOF when reading a line
+
+======================================================================
+FAIL: test_doubles (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 55, in test_doubles
+    'Erreur dans les doublons'
+AssertionError: Lists differ: ['pas de doublons', 'contient des doublons'] != [False, True]
+
+First differing element 0:
+'pas de doublons'
+False
+
+- ['pas de doublons', 'contient des doublons']
++ [False, True] : Erreur dans les doublons
+
+======================================================================
+FAIL: test_grades (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 69, in test_grades
+    'Erreur dans les notes'
+AssertionError: [{'Sei': 0.0}] is not an instance of <class 'dict'> : First argument is not a dictionary
+
+======================================================================
+FAIL: test_histogram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 84, in test_histogram
+    'Erreur dans les histogrammes'
+AssertionError: [({}, []), ({}, [])] is not an instance of <class 'dict'> : First argument is not a dictionary
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=3, errors=2)
